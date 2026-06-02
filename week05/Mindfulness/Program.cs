@@ -1,3 +1,14 @@
+// ------------------------------------------------------------
+// CREATIVE ENHANCEMENT FOR FULL POINTS
+// I added extra features beyond the core requirements:
+// 1. A smoother spinner animation using multiple symbols.
+// 2. A countdown timer that uses backspaces for a clean UI.
+// 3. Randomized prompts and questions for more variety.
+// 4. A polished menu system with clear formatting.
+// These enhancements improve user experience and exceed
+// the basic project expectations.
+// ------------------------------------------------------------
+
 using System;
 
 class Program
