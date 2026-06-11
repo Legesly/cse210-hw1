@@ -10,10 +10,7 @@ public class Running : Activity
         _distanceKm = distanceKm;
     }
 
-    public override double GetDistance()
-    {
-        return _distanceKm;
-    }
+    public override double GetDistance() => _distanceKm;
 
     public override double GetSpeed()
     {

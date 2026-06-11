@@ -14,9 +14,9 @@ public abstract class Activity
     public DateTime GetDate() => _date;
     public int GetLengthMinutes() => _lengthMinutes;
 
-    public abstract double GetDistance(); // km
-    public abstract double GetSpeed();    // kph
-    public abstract double GetPace();     // min per km
+    public abstract double GetDistance();
+    public abstract double GetSpeed();
+    public abstract double GetPace();
 
     public virtual string GetSummary()
     {
