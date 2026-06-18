@@ -1,29 +1,32 @@
 using System;
 
-public abstract class Activity
+namespace ExerciseTracking
 {
-    private DateTime _date;
-    private int _lengthMinutes;
-
-    protected Activity(DateTime date, int lengthMinutes)
+    public abstract class Activity
     {
-        _date = date;
-        _lengthMinutes = lengthMinutes;
-    }
+        private DateTime _date;
+        private int _lengthMinutes;
 
-    public DateTime GetDate() => _date;
-    public int GetLengthMinutes() => _lengthMinutes;
+        protected Activity(DateTime date, int lengthMinutes)
+        {
+            _date = date;
+            _lengthMinutes = lengthMinutes;
+        }
 
-    public abstract double GetDistance();
-    public abstract double GetSpeed();
-    public abstract double GetPace();
+        public DateTime GetDate() => _date;
+        public int GetLengthMinutes() => _lengthMinutes;
 
-    public virtual string GetSummary()
-    {
-        return $"{_date:dd MMM yyyy} {GetType().Name} " +
-               $"({GetLengthMinutes()} min) - " +
-               $"Distance: {GetDistance():0.0} km, " +
-               $"Speed: {GetSpeed():0.0} kph, " +
-               $"Pace: {GetPace():0.0} min per km";
+        public abstract double GetDistance();
+        public abstract double GetSpeed();
+        public abstract double GetPace();
+
+        public virtual string GetSummary()
+        {
+            return $"{_date:dd MMM yyyy} {GetType().Name} " +
+                   $"({GetLengthMinutes()} min) - " +
+                   $"Distance: {GetDistance():0.0} km, " +
+                   $"Speed: {GetSpeed():0.0} kph, " +
+                   $"Pace: {GetPace():0.0} min per km";
+        }
     }
 }

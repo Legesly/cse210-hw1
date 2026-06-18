@@ -3,13 +3,13 @@ using System.Collections.Generic;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
-        List<Activity> activities = new List<Activity>
+        List<Activity> activities = new List<Activity>()
         {
-            new Running(new DateTime(2026, 6, 10), 30, 5.0),
-            new Cycling(new DateTime(2026, 6, 11), 45, 20.0),
-            new Swimming(new DateTime(2026, 6, 12), 40, 30)
+            new Running(new DateTime(2022, 11, 3), 30, 3.0),
+            new Cycling(new DateTime(2022, 11, 3), 30, 9.7),
+            new Swimming(new DateTime(2022, 11, 3), 30, 20)
         };
 
         foreach (Activity activity in activities)

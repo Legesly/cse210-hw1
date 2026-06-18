@@ -1,24 +1,27 @@
 using System;
 
-public class Running : Activity
+namespace ExerciseTracking
 {
-    private double _distanceKm;
-
-    public Running(DateTime date, int lengthMinutes, double distanceKm)
-        : base(date, lengthMinutes)
+    public class Running : Activity
     {
-        _distanceKm = distanceKm;
-    }
+        private double _distanceKm;
 
-    public override double GetDistance() => _distanceKm;
+        public Running(DateTime date, int lengthMinutes, double distanceKm)
+            : base(date, lengthMinutes)
+        {
+            _distanceKm = distanceKm;
+        }
 
-    public override double GetSpeed()
-    {
-        return (GetDistance() / GetLengthMinutes()) * 60.0;
-    }
+        public override double GetDistance() => _distanceKm;
 
-    public override double GetPace()
-    {
-        return GetLengthMinutes() / GetDistance();
+        public override double GetSpeed()
+        {
+            return (GetDistance() / GetLengthMinutes()) * 60.0;
+        }
+
+        public override double GetPace()
+        {
+            return GetLengthMinutes() / GetDistance();
+        }
     }
 }
